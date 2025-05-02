@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+}
+
+.code-editor-container{
+    width: 100%;
+    height: 70%;
+    background-color: rgb(39, 30, 30);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap:20px;
+    overflow: auto;
+    /* padding:20px; */
+}
+
+.code-editor{
+    width: 400px;
+    height: 400px;
+    background-color: rgb(39, 30, 30);
+    box-shadow: 5px 5px 10px black;
+    border: 1px solid rgba(255, 255, 255, 0.109);
+    border-radius: 20px;
+    overflow: auto;
+    position: relative;
+}
+
+.head{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(39, 30, 30);
+    box-shadow: 10px 10px 20px black;
+    color: rgba(255, 255, 255, 0.523);
+    border-radius: 0px 0px 20px 20px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left-head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.right-head i{
+    margin: 10px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.right-head i:hover{
+    scale: 140%;
+}
+
+.code-editor textarea{
+    width: 100%;
+    height: 320px;
+    background-color: rgb(39, 30, 30);
+    border: none;
+    position: absolute;
+    bottom: 0;
+    outline: none;
+    color: whitesmoke;
+    padding: 20px;
+    resize: none;
+    font-size: 20px;
+}
+
+.output-container{
+    width: 100%;
+    height: 30%;
+    box-shadow: 3px -4px 10px rgb(86, 191, 223);
+    z-index: 1;
+    position: fixed;
+    bottom: 0;
+    transition: all 0.5s;
+}
+
+.output-head{
+    width: 100%;
+    height: 60px;
+    background-color: rgb(39, 30, 30);
+    color: rgba(255, 255, 255, 0.828);
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap:20px
+}
+
+.output-head i{
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.output-head i:hover{
+    scale: 140%;
+}
+
+#output{
+    width: 100%;
+    height: calc(100% - 60px);
+   background-color: white;
+    overflow: auto;
+}
+
+.output-fullscreen-active{
+    height: 100%;
+}
+
+.html-inputArea::selection{
+    background-color: rgb(251, 0, 255);
+}
+
+.css-inputArea::selection{
+    background-color: rgb(255, 0, 34);
+}
+
+.js-inputArea::selection{
+    background-color: rgb(0, 21, 255);
+}
+
+.dark-mode{
+    background-color: black;
+    color: white;
+}
+
+.dark-mode .code-editor{
+    background-color: #222;
+    color: white;
+    box-shadow: 3px -4px 10px rgb(86, 191, 223);
+}
+
+.dark-mode textarea{
+    background-color: white;
+    color: black;
+}
